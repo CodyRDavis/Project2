@@ -41,19 +41,3 @@ module.exports = function(sequelize, DataTypes) {
 
   return User;
 };
-
-
-var Post = sequelize.define("Post", {
-  title: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    validate: {
-      len: [1]
-    }
-  },
-  body: {
-    type: DataTypes.TEXT,
-    allowNull: false,
-    len: [1]
-  }
-});
