@@ -40,6 +40,7 @@ module.exports = function(sequelize, DataTypes) {
     // When an Author is deleted, also delete any associated Posts
     
     User.hasMany(models.Pet, {
+      foreignKey: "owner_id",
       onDelete: "cascade"
     });
   };
