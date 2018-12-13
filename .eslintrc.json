@@ -1,5 +1,10 @@
 {
+
+    "parserOptions": {
+        "ecmaVersion": 2017
+    },
     "env": {
+        "es6": true,
         "browser": true,
         "commonjs": true,
         "node": true
@@ -20,7 +25,6 @@
         "eqeqeq": "error",
         "no-empty-function": "error",
         "no-multi-spaces": "error",
-        "no-unused-vars": "error",
         "indent": [
             "error",
             2
