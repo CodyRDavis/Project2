@@ -12,7 +12,9 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/userApiRoutes")(app);
+require("./routes/petApiRoutes")(app);
+//require("./routes/taskApiRoutes")(app);//not sure what to do with this one yet or how to name it.
 require("./routes/htmlRoutes")(app);
 
 const syncOptions = { force: false };
