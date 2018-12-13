@@ -1,24 +1,26 @@
+// eslint-disable-next-line no-unused-vars
 var db = require("../models");
 
 module.exports = function(app) {
-  // Load index page
+  // Load welcome page
   app.get("/", function(req, res) {
-    db.User.findAll({}).then(function(results) {
-      res.send(results);
-    });
+    res.send("Connected: / page");
   });
 
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function(req, res) {
-    db.User.findOne({ where: { id: req.params.id } }).then(function(dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
-    });
+  app.get("/signup", function(req, res){
+    res.send("Sign up");
   });
-
+  app.get("/login", function(req, res){
+    res.send("log in");
+  });
+  app.get("/dashboard", function(req, res){
+    res.send("dashboard");
+  });
+  app.get("/pet/:id", function(req,res){
+    res.send("specific pet page");
+  });
   // Render 404 page for any unmatched routes
   app.get("*", function(req, res) {
-    res.render("404");
+    res.redirect("/");
   });
 };
