@@ -25,6 +25,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     phoneNumber: {
       type: DataTypes.STRING,
+      validate: {
+        isNumeric: true,
+      }
     },
     is_vet: {
       type: DataTypes.BOOLEAN,
