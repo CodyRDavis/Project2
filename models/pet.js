@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  var Pet = sequelize.define("Pet", {
+  const Pet = sequelize.define("Pet", {
     // Giving the Author model a name of type STRING
     name: {
       type: DataTypes.STRING,
@@ -22,13 +22,11 @@ module.exports = function(sequelize, DataTypes) {
 
   });
 
-  /* Pet.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Pet.hasMany(models.services, {
+  Pet.associate = function(models) {
+    Pet.hasMany(models.Service, {
       onDelete: "cascade"
     });
-  }; */
+  };
 
   return Pet;
 };

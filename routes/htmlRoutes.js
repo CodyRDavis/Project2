@@ -1,5 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-var db = require("../models");
+const db = require("../models");
+const path = require("path");
 
 module.exports = function(app) {
   // Load welcome page

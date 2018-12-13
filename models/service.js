@@ -5,26 +5,18 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING
     },
     description: {
-      Type: DataTypes.STRING
+      type: DataTypes.STRING
     },
     price: {
-      Type: DataTypes.DOUBLE
+      type: DataTypes.DOUBLE
     },
     dateDue: {
-      Type: DataTypes.DATE
+      type: DataTypes.DATE
     },
     datePerformed: {
-      Type: DataTypes.DATE
+      type: DataTypes.DATE
     }
   });
-    
-  Service.associate = function(models) {
-    // Associating Author with Posts
-    // When an Author is deleted, also delete any associated Posts
-    Service.hasMany(models.exam, {
-      onDelete: "cascade"
-    });
-  };
 
   return Service;
 };
