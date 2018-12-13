@@ -2,8 +2,10 @@ var db = require("../models");
 
 module.exports = function(app) {
   // Get all user
-  app.get("/api/user", function(req, res) {
-    db.User.findAll({}).then(function(results) {
+  app.get("/api/alluser", function(req, res) {
+    db.User.findAll({ include:[db.Pet]}).then(function(results) {
+      //  Parse the results data to create an array of pet id
+      results.find
       res.json(results);
     });
   });

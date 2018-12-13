@@ -23,6 +23,7 @@ module.exports = function(sequelize, DataTypes) {
   });
 
   Pet.associate = function(models) {
+    Pet.belongsTo(models.User);
     Pet.hasMany(models.Service, {
       onDelete: "cascade"
     });

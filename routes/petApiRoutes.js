@@ -4,7 +4,7 @@ module.exports = function(app) {
   
   // Get all examples
   app.get("/api/pets", function(req, res) {
-    db.Pet.findAll({}).then(function(results) {
+    db.Pet.findAll({include:[db.Service]}).then(function(results) {
       res.json(results);
     });
   });

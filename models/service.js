@@ -18,6 +18,8 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
+  //finish association
+  //Pet.belongsTo(models.User);
   return Service;
 };
   
