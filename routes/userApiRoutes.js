@@ -17,15 +17,15 @@ module.exports = function(app) {
     });
   });
 
-  // Update a user by id
-  app.put("/api/user/:id", function(req,res) {
-    //TODO update the user
-    res.send("update user");
-  });
-
-  // Delete an user by id
-  app.delete("/api/user/:id", function(req, res) {
-    db.User.destroy({ where: { id: req.params.id } }).then(function(results) {
+  //SPECIFIC USER
+  //============================================================
+  app.get("/api/user/:id", function(req, res){
+    console.log(req.body);
+    db.Pet.findAll(
+      { 
+        where: {owner_id : req.params.id}
+      }).then(function(results){
+      console.log(results);
       res.json(results);
     });
   });
