@@ -8,6 +8,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     species: {
       type: DataTypes.STRING
     },

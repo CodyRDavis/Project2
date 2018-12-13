@@ -3,7 +3,7 @@ var db = require("../models");
 module.exports = function(app) {
   // Get all user
   app.get("/api/alluser", function(req, res) {
-    db.Users.findAll({ include:[db.Pet]}).then(function(results) {
+    db.User.findAll({ include:[db.Pet]}).then(function(results) {
       //  Parse the results data to create an array of pet id
       res.json(results);
     });
@@ -11,7 +11,8 @@ module.exports = function(app) {
 
   // Create a new user
   app.post("/api/user", function(req, res) {
-    db.Users.create(req.body).then(function(results) {
+    console.log(req.body);
+    db.User.create(req.body).then(function(results) {
       res.json(results);
     });
   });
@@ -24,7 +25,7 @@ module.exports = function(app) {
 
   // Delete an user by id
   app.delete("/api/user/:id", function(req, res) {
-    db.Users.destroy({ where: { id: req.params.id } }).then(function(results) {
+    db.User.destroy({ where: { id: req.params.id } }).then(function(results) {
       res.json(results);
     });
   });
