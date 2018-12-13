@@ -8,6 +8,10 @@ module.exports = function(sequelize, DataTypes) {
         len: [1]
       }
     },
+    owner_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
+    },
     species: {
       type: DataTypes.STRING
     },
@@ -17,14 +21,16 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
     },
     chipNumber: {type: DataTypes.STRING},
-    alergies: {type: DataTypes.STRING},
+    allergies: {type: DataTypes.STRING},
     notes: {type: DataTypes.STRING}
 
   });
 
   Pet.associate = function(models) {
+    Pet.belongsTo(models.User);
     Pet.hasMany(models.Service, {
-      onDelete: "cascade"
+      onDelete: "cascade",
+      foreignKey: "owner_id"
     });
   };
 

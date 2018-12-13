@@ -4,13 +4,14 @@ module.exports = function(app) {
   
   // Get all examples
   app.get("/api/pets", function(req, res) {
-    db.Pet.findAll({}).then(function(results) {
+    db.Pet.findAll({include:[db.Service]}).then(function(results) {
       res.json(results);
     });
   });
 
   // Create a new pet
   app.post("/api/pets", function(req, res) {
+    console.log(req.body);
     db.Pet.create(req.body).then(function(results) {
       res.json(results);
     });

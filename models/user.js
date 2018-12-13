@@ -12,7 +12,8 @@ module.exports = function(sequelize, DataTypes) {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1]
+        len: [1],
+        isEmail: true
       }
     },
     password: {
@@ -24,6 +25,9 @@ module.exports = function(sequelize, DataTypes) {
     },
     phoneNumber: {
       type: DataTypes.STRING,
+      validate: {
+        isNumeric: true,
+      }
     },
     is_vet: {
       type: DataTypes.BOOLEAN,
@@ -34,7 +38,9 @@ module.exports = function(sequelize, DataTypes) {
   User.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
+    
     User.hasMany(models.Pet, {
+      foreignKey: "owner_id",
       onDelete: "cascade"
     });
   };
