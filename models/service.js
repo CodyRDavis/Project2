@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-  const Serivce = sequelize.define("Service", {
+  const Service = sequelize.define("Service", {
     // Giving the Author model a name of type STRING
     name: {
       type: DataTypes.STRING
