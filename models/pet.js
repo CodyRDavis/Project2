@@ -17,7 +17,7 @@ module.exports = function(sequelize, DataTypes) {
       allowNull: true,
     },
     chipNumber: {type: DataTypes.STRING},
-    alergies: {type: DataTypes.STRING},
+    allergies: {type: DataTypes.STRING},
     notes: {type: DataTypes.STRING}
 
   });
