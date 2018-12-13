@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  
   // Get all examples
   app.get("/api/pets", function(req, res) {
     db.Pet.findAll({}).then(function(results) {

@@ -20,13 +20,12 @@ module.exports = function(sequelize, DataTypes) {
     alergies: {type: DataTypes.STRING},
     notes: {type: DataTypes.STRING}
 
-
   });
 
   /* Pet.associate = function(models) {
     // Associating Author with Posts
     // When an Author is deleted, also delete any associated Posts
-    Pet.hasMany(models.exam, {
+    Pet.hasMany(models.services, {
       onDelete: "cascade"
     });
   }; */
