@@ -36,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  User.prototype.validPassword = function(password){
+  User.prototype.validPassword = function(password){git
     
     return bcrypt.compareSync(password, this.password);
   };
