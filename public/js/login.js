@@ -5,6 +5,7 @@ $("document").ready(function(){
       email: $("#email").val(),
       password: $("#password").val(),
     }).then(function(result){
+      console.log(result);
     });
   });
 });
