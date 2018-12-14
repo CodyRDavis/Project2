@@ -3,7 +3,7 @@
     "username": "root",
     "password": "password",
     "database": "pets_db",
-    "port": 8889,
+    "port": 3306,
     "host": "localhost",
     "dialect": "mysql"
   },
