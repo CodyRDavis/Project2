@@ -27,7 +27,7 @@ module.exports = function(sequelize, DataTypes) {
     phoneNumber: {
       type: DataTypes.STRING,
       validate: {
-        isNumeric: true,
+        isNumeric: true
       }
     },
     is_vet: {
@@ -36,7 +36,7 @@ module.exports = function(sequelize, DataTypes) {
     }
   });
 
-  User.prototype.validPassword = function(password){git
+  User.prototype.validPassword = function(password){
     
     return bcrypt.compareSync(password, this.password);
   };
