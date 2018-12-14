@@ -6,7 +6,9 @@ module.exports = function(app) {
   //LOGIN
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     console.log("log in attempt");
-    res.send("logged in");
+
+    res.redirect("/dashboard");
+    //res.send("logged in"); //FOR TESTING
     //res.json("/members");
   });
   // Get all user
