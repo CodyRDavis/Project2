@@ -1,9 +1,11 @@
 //DEPENDENCIES
 require("dotenv").config();
 const express = require("express");
+const session = require("express-session");
 const passport = require("./config/passport");
 const db = require("./models");
-//SERVER DEPENDENCIES
+
+//SERVER VARIABLES
 const app = express();
 const PORT = process.env.PORT || 3000;
 

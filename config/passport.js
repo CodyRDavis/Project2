@@ -13,6 +13,7 @@ passport.use(new LocalStrategy(
         email: email
       }
     }).then(function(dbUser){
+      console.log("Is THIS running?");
       if(!dbUser){
         return done(null, false, { message: "Incorrect Email"});
       } else if(!dbUser.validPassword(password)){
