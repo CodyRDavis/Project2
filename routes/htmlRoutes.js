@@ -17,12 +17,8 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../public/login.html"));
   });
   app.get("/dashboard", isAuthenticated, function(req, res){
-    console.log(req.user);
-    if (req.user){
-      console.log (req.user);
-      res.redirect("/dashboard");
-    }
-    res.redirect("/");
+    console.log (req.user);
+    res.send("Welcome to dashboard");
   });
   app.get("/pet/:id", isAuthenticated, function(req,res){
     //TODO: query database and check to see if user.id = pet owner id.
