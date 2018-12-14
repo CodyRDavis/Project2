@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Pet Portal</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/owner.css" />
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+    
+    <div>
+      <nav id="navBar" class="navbar navbar-light bg-light">
+             <a class="navbar-brand">Pet Portal</a>
+        
+              <form class="form-inline" id="search-form">
+                <input id="inputLocation" class="form-control mr-sm-2" type="textbox" placeholder="Search" aria-label="Search">
+        
+                <input class="btn btn-outline-success my-2 my-sm-0" type="button" id="submit" value="Search">
+              </form>
+      </nav>    
+
+      <div>
+        <h3>Checkup</h3>
+      </div>
+
+      <div class = "category-card" style="background-color:skyblue">
+        <div id = "petBar" class = "category-bar">
+        </div>
+        <div id = "pet-display" class = "category-deck flex accordian accordian-fold">
+          <div class = "location-card d-inline-block">
+            <div class = "location-title text-center">
+              <div class="row">
+                <div class="column left">
+                  <p id="pet-msg">HELLO COCO</p>
+                  <img src = "https://via.placeholder.com/175" id="pet-img" > 
+                </div>
+                <div class="column right">  
+                  <p id="pet-text"></p>
+                  <ul class="card-list">
+                    <p>
+                    <p> Appointments:
+                    <p> Coco Likes:
+                    <p> Coco Growls:
+                    <b> 
+                  </ul> 
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>  
+      <div>
+        <p id="links-bottom"><a href="https://pets.webmd.com/default.htm">About Us</a><a> | </a><a href="https://www.google.com/">Contact Us</a><a> | </a><a href="https://pets.webmd.com/default.htm">Resources</a></p>
+      </div>
+    </div>
+
+</body>
+</html>
