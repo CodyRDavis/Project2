@@ -18,10 +18,11 @@ module.exports = function(app) {
   });
 
   // Create a new user
-  app.post("/api/user", function(req, res) {
+  app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create(req.body).then(function(results) {
-      res.json(results);
+      res.redirect("/");
+      //res.json(results); //for testing
     });
   });
 
