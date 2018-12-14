@@ -21,8 +21,44 @@ html, body {
   width: 100%;
 }
 
+h1 {
+  font-size: 75px;
+  letter-spacing: 10px;
+  text-align: center;
+  color: black;
+}
+
+h2 {
+  font-size: 35px;
+  color:  rgb(48, 66, 57);
+}
+
+h3 {
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+
 /* Styles main text area */
 .card {
   background-color: rgba(253, 255, 255, 0.719);
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
 }
 
+/* Responsive for small mobile screens*/
+@media screen and (max-width: 475px) {
+  h1 {
+    font-size: 45px;
+    letter-spacing: 6px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  h3 {
+    letter-spacing: 2px;
+    font-size: 20px;
+  }
+}
