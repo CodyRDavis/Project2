@@ -5,14 +5,14 @@ const path = require("path");
 module.exports = function(app) {
   // Load welcome page
   app.get("/", function(req, res) {
-    res.send("Connected: / page");
+    res.sendFile(path.join(__dirname + "/../public/view.html"));
   });
 
   app.get("/signup", function(req, res){
-    res.send("Sign up");
+    res.sendFile(path.join(__dirname + "/../public/create.html"));
   });
   app.get("/login", function(req, res){
-    res.send("log in");
+    res.sendFile(path.join(__dirname + "/../public/login.html"));
   });
   app.get("/dashboard", function(req, res){
     res.send("dashboard");
