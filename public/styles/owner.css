@@ -1,0 +1,64 @@
+
+
+body {
+    background-image: url("../images/annie-spratt-469224-unsplash.jpg");
+    background-size: 100%;
+    }
+
+.navbar-brand {
+  margin-top: 20px;
+  font-size: 40px;  
+}
+
+#search-form {
+    float: right;
+}
+
+h3 {
+  display: block;
+  margin: 0 auto;
+  width: 200px;
+  line-height: 75px;
+  text-align: center;
+  text-align: middle;
+  font-size: 30px;
+  outline-style: auto;
+  margin-bottom: 20px;
+  margin-top: 10px;  
+}
+
+.category-card { 
+    margin-bottom: 50px;
+    margin-left: 5%;
+    margin-right: 5%;  
+}
+
+#pet-msg {
+    padding-top: 3%;
+    text-align: center;
+    font-size: 18px;
+}
+
+.row {
+    margin-left: 0px;
+}
+
+.card-list {
+text-align: left;
+padding-top: 5%;
+}
+
+
+#pet-text {
+    font-size: 16px;
+    padding-top: 5px;
+    margin: 0px;
+    text-align: center;
+    width: 500px;
+}
+
+#links-bottom {
+    margin-top: 5px;
+    margin-left: 5%
+}
+
