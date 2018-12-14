@@ -8,7 +8,7 @@ html, body {
 
 /* Style for background image */
  body {
-   background-image: url("../images/spratt-469224-unsplash.jpg");
+   background-image: url("../images/annie-spratt-469224-unsplash.jpg");
    background-size: 100%;
  }
 
@@ -25,3 +25,4 @@ html, body {
 .card {
   background-color: rgba(253, 255, 255, 0.719);
 }
+
