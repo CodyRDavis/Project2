@@ -1,6 +1,14 @@
 var db = require("../models");
+var passport = require("../config/passport");
 
 module.exports = function(app) {
+
+  //LOGIN
+  app.post("/api/login", passport.authenticate("local"), function(req, res) {
+    console.log("log in attempt");
+    res.send("logged in");
+    //res.json("/members");
+  });
   // Get all user
   app.get("/api/alluser", function(req, res) {
     db.User.findAll({ include:[db.Pet]}).then(function(results) {
