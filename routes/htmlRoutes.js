@@ -18,7 +18,7 @@ module.exports = function(app) {
   });
   app.get("/dashboard", isAuthenticated, function(req, res){
     console.log (req.user);
-    res.send("Welcome to dashboard");
+    res.sendFile(path.join(__dirname + "/../public/login.html"));
   });
   app.get("/pet/:id", isAuthenticated, function(req,res){
     //TODO: query database and check to see if user.id = pet owner id.

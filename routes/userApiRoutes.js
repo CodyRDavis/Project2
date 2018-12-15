@@ -7,7 +7,7 @@ module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     console.log("log in attempt");
 
-    res.redirect("/dashboard");
+    return res.redirect("/dashboard");
     //res.send("logged in"); //FOR TESTING
     //res.json("/members");
   });
@@ -23,7 +23,8 @@ module.exports = function(app) {
   app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create(req.body).then(function(results) {
-      res.redirect("/");
+      console.log("redirect");
+      return res.redirect("/");
       //res.json(results); //for testing
     });
   });

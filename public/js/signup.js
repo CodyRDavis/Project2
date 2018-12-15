@@ -9,6 +9,10 @@ $("document").ready(function(){
       is_vet: false
     }).then(function(){
       console.log("submitted");
-    });
+
+    }).done(function(data){
+      window.location.href = data;
+    }
+    );
   });
 });
