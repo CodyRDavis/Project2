@@ -17,7 +17,7 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname + "/../public/login.html"));
   });
   app.get("/dashboard", isAuthenticated, function(req, res){
-    console.log (req.user);
+    console.log ("user #"+req.user.id + "logged in");
     res.sendFile(path.join(__dirname + "/../public/login.html"));
   });
   app.get("/pet/:id", isAuthenticated, function(req,res){
