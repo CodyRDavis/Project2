@@ -20,7 +20,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // Routes
-require("./routes/userRoutes")(app);
+require("./routes/userApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 const syncOptions = { force: false };

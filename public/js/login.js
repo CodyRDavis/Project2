@@ -6,8 +6,7 @@ $("document").ready(function(){
       password: $("#password").val(),
     }).then(function(result){
       console.log(result);
-    }).done(function(data){
-      window.location.href = data;
+      window.location.href = result;
     });
   });
 });

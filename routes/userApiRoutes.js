@@ -24,7 +24,7 @@ module.exports = function(app) {
       if(user){ //if user exists
         console.log("User Already exists");
         res.status(400).send("This user Already exists");
-      }else{ //if user does not exist
+      }else{ //if user does not exist already
         console.log("New User detected");
         db.User.create({
           name: req.body.name,
@@ -41,7 +41,7 @@ module.exports = function(app) {
   //ROUTE FOR LOGGIN IN
   app.post("/api/login", passport.authenticate("local"), function(req, res){
     if (req.user){
-      res.redirect("/dashboard");
+      res.send("/members");
     }
   });
 };
