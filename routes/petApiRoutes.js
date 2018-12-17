@@ -4,7 +4,8 @@ module.exports = function(app) {
   
   // Get all examples
   app.get("/api/pets", function(req, res) {
-    db.Pet.findAll({include:[db.Service]}).then(function(results) {
+    const userId = req.user.id;
+    db.Pet.findAll({where: {owner_id : userId},include:[db.Service]}).then(function(results) {
       res.json(results);
     });
   });

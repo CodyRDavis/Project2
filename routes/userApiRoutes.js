@@ -6,7 +6,9 @@ module.exports = function(app) {
   //LOGIN
   app.post("/api/login", passport.authenticate("local"), function(req, res) {
     console.log("log in attempt");
-    res.send("logged in");
+
+    res.redirect("/dashboard");
+    //res.send("logged in"); //FOR TESTING
     //res.json("/members");
   });
   // Get all user
@@ -18,10 +20,11 @@ module.exports = function(app) {
   });
 
   // Create a new user
-  app.post("/api/user", function(req, res) {
+  app.post("/api/signup", function(req, res) {
     console.log(req.body);
     db.User.create(req.body).then(function(results) {
-      res.json(results);
+      res.redirect("/");
+      //res.json(results); //for testing
     });
   });
 
