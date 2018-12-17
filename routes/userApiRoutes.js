@@ -33,7 +33,7 @@ module.exports = function(app) {
           phoneNumber: req.body.phoneNumber,
           is_vet: false
         });
-        res.send("New User");
+        res.send("/");
       }
     });
   });

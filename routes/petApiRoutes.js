@@ -14,7 +14,7 @@ module.exports = function(app) {
   app.post("/api/pets", function(req, res) {
     console.log(req.body);
     db.Pet.create(req.body).then(function(results) {
-      res.json(results);
+      res.send("/");
     });
   });
 

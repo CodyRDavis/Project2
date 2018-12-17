@@ -21,6 +21,7 @@ app.use(passport.session());
 
 // Routes
 require("./routes/userApiRoutes")(app);
+require("./routes/petApiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 const syncOptions = { force: false };
@@ -35,7 +36,7 @@ if (process.env.NODE_ENV === "test") {
 db.sequelize.sync(syncOptions).then(function() {
   app.listen(PORT, function() {
     console.log(
-      "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
+      "Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,
       PORT
     );

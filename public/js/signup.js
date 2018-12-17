@@ -1,7 +1,7 @@
 $("document").ready(function(){
   $("#add-btn").click(function(e){
     e.preventDefault();
-    $.post("/api/signup", {
+    $.post("/api/createUser", {
       name: $("#name").val(),
       email: $("#email").val(),
       password: $("#password").val(),
