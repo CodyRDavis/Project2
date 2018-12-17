@@ -1,7 +1,7 @@
 $("document").ready(function(){
   $("#add-btn").click(function(e){
     e.preventDefault();
-    $.post("/api/signup", {
+    $.post("/api/createUser", {
       name: $("#name").val(),
       email: $("#email").val(),
       password: $("#password").val(),
@@ -9,6 +9,10 @@ $("document").ready(function(){
       is_vet: false
     }).then(function(){
       console.log("submitted");
-    });
+
+    }).done(function(data){
+      window.location.href = data;
+    }
+    );
   });
 });

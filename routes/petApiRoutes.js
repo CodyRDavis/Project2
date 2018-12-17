@@ -2,7 +2,7 @@ var db = require("../models");
 
 module.exports = function(app) {
   
-  // Get all examples
+  // Get pets belonging to user
   app.get("/api/pets", function(req, res) {
     const userId = req.user.id;
     db.Pet.findAll({where: {owner_id : userId},include:[db.Service]}).then(function(results) {
@@ -14,7 +14,7 @@ module.exports = function(app) {
   app.post("/api/pets", function(req, res) {
     console.log(req.body);
     db.Pet.create(req.body).then(function(results) {
-      res.json(results);
+      res.send("/");
     });
   });
 
