@@ -42,6 +42,8 @@ module.exports = function(app) {
   app.post("/api/login", passport.authenticate("local"), function(req, res){
     if (req.user){
       res.send("/members");
+    } else {
+      res.status(400).send(false);
     }
   });
 };
