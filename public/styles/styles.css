@@ -6,6 +6,14 @@ html, body {
   width: 100%;
 }  
 
+.col-lg-12{
+  padding-left:0;
+  padding-right: 0;
+}
+
+.row{
+  margin: 0;
+}
 /* Style for background image */
  body {
    background-image: url("../images/annie-spratt-469224-unsplash.jpg");
