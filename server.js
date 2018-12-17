@@ -1,11 +1,9 @@
-//DEPENDENCIES
 require("dotenv").config();
 const express = require("express");
 const session = require("express-session");
-const passport = require("./config/passport");
+
 const db = require("./models");
 
-//SERVER VARIABLES
 const app = express();
 const PORT = process.env.PORT || 3000;
 
@@ -13,21 +11,22 @@ const PORT = process.env.PORT || 3000;
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(express.static("public"));
+
+//PASSPORT
+const passport = require("./config/passport");
 //INIT PASSPORT
 app.use(session({ secret: "keyboard dog", resave: true, saveUninitialize:true}));
 app.use(passport.initialize());
 app.use(passport.session());
 
-// ROUTES
-require("./routes/userApiRoutes")(app);
-require("./routes/petApiRoutes")(app);
-//require("./routes/serviceApiRoutes")(app);
+// Routes
+require("./routes/userRoutes")(app);
 require("./routes/htmlRoutes")(app);
 
 const syncOptions = { force: false };
 
 // If running a test, set syncOptions.force to true
-// clearing the database
+// clearing the `testdb`
 if (process.env.NODE_ENV === "test") {
   syncOptions.force = true;
 }
