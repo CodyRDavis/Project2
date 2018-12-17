@@ -8,14 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" type="text/css" media="screen" href="styles/owner.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="styles/styles.css" />
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 </head>
 
 <body>
     
-    <div>
+    <!-- <div>
       <nav id="navBar" class="navbar navbar-light bg-light">
              <a class="navbar-brand">Pet Portal</a>
         
@@ -24,13 +24,14 @@
         
                 <input class="btn btn-outline-success my-2 my-sm-0" type="button" id="submit" value="Search">
               </form>
-      </nav>    
-
-      <div>
-        <h3>Checkup</h3>
-      </div>
-
-      <div class = "category-card" style="background-color:skyblue">
+      </nav>     -->
+      <div class="container">
+        <div class="jumbotron">
+            <h1>CHECK-UP</h1>
+            <hr>
+        </div>
+      
+      <div class = "category-card" style="background-color:rgba(253, 255, 255, 0.819)">
         <div id = "petBar" class = "category-bar">
         </div>
         <div id = "pet-display" class = "category-deck flex accordian accordian-fold">
@@ -38,16 +39,15 @@
             <div class = "location-title text-center">
               <div class="row">
                 <div class="column left">
-                  <p id="pet-msg">HELLO COCO</p>
-                  <img src = "https://via.placeholder.com/175" id="pet-img" > 
+                  <h2 id="pet-msg">HELLO LILY</h2>
+                  <img src = "images/lily.png" id="pet-img" style="margin: 0 0 15px 25px" height="250px" width="auto"> 
                 </div>
                 <div class="column right">  
                   <p id="pet-text"></p>
                   <ul class="card-list">
-                    <p>
-                    <p> Appointments:
-                    <p> Coco Likes:
-                    <p> Coco Growls:
+                    <li>Appointments:</li> 
+                    <li>Lily Likes:</li>
+                    <li>Lily Growls:</li> 
                     <b> 
                   </ul> 
                 </div>

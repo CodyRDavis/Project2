@@ -14,7 +14,7 @@ html, body {
 
  /* jumbotron style */
 .jumbotron {
-  background-color: rgba(253, 255, 255, 0.719);
+  background-color: rgba(253, 255, 255, 0.819);
   text-align: center;
   margin-bottom: 15px;
   padding-bottom: 35px;
@@ -46,6 +46,46 @@ h3 {
   font-size: 20px;
 }
 
+/* Styles list in owner.html */
+.card-list {
+  font-weight: bold;
+  margin-top: 40px;
+
+}
+
+/* Styles pet info */
+#pet-msg {
+  font-size: 30px;
+  margin-left: 30px;
+}
+
+p {
+  font-size: 18px;
+}
+
+/* Styles links @ bottom of pages */
+#links-bottom {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: rgba(253, 255, 255, 0.719);
+  color: black;
+  text-align: center;
+}
+
+#links {
+  position: fixed;
+  width: 80%;
+  bottom: 0;
+  color: black;
+  text-align: center;
+}
+
+a {
+  color: rgb(134, 34, 34);
+}
+
 /* Responsive for small mobile screens*/
 @media screen and (max-width: 475px) {
   h1 {
@@ -61,4 +101,10 @@ h3 {
     letter-spacing: 2px;
     font-size: 20px;
   }
+
+  img {
+    height: 150px;
+    width: auto;
+  }
+
 }

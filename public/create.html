@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="styles/styles.css">
   <script src="https://code.jquery.com/jquery.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
@@ -18,8 +18,12 @@
   <div class="container">
     <div class="jumbotron">
       <h1>Pet Portal</h1>
-      <h3>Your pets & their info</h3>      
+      <h3>Your pets & their info</h3>     
       <hr>
+      <!-- <a href="/" class="btn btn-danger btn-lg">
+        <span class="fa fa-eye"></span> Search Characters</a>
+      <a href="/all" class="btn btn-danger btn-lg">
+        <span class="fa fa-th-list"></span> All Characters</a> -->
     </div>
     <div class="row">
 
@@ -27,7 +31,7 @@
 
         <div class="card">
           <div class="card-header">
-            <h2>Please Create Your Account </h2>
+           <h2>Please Create Your Account</h2> 
           </div>
           <div class="card-body">
             <form action="" method="POST" role="form">
@@ -54,20 +58,20 @@
 
             </form>
             <br>
-            <!-- <div class="text-right">
-              <button type="submit" class="btn btn-primary btn-md" id="add-btn">
-                <span class="fa fa-fire"></span> Create</button>
-            </div> -->
-            <input type="button" onclick="location.href='/create.html'" value="Create">
+            <input type="button" onclick="location.href='/create.html'" value="Create Account">
+
           </div>
         </div>
 
       </div>
     </div>
+    <p id="links"><a href="https://pets.webmd.com/default.htm">About Us</a><a> | </a><a href="https://www.google.com/">Contact Us</a><a> | </a><a href="https://pets.webmd.com/default.htm">Resources</a></p>
   </div>
+  
 
   <script src="js/add.js" type="text/javascript"></script>
 
 </body>
+
 
 </html>
