@@ -23,17 +23,18 @@ module.exports = function(app) {
 
   app.post("/api/signup", function(req,res){
     console.log("new sign up... checking for existing user.");
-    console.log(req.body);
     //console.log(req.body);
+
+    //checking to see if user email is already in use
     db.User.findOne({where: {email: req.body.email}}).then(function(user){
-      if(user){
+      if(user){ //user is true if a result is found
         console.log("user exists");
         res.json({
           success:false,
           data: {},
           error: ["This Email is already associated with another account"]
         });
-      }else{
+      }else{ //no user was found.
         db.User.create(req.body).then(function(result){
           //console.log(result);
           res.redirect(307, "/api/login");

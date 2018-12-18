@@ -10,7 +10,10 @@ $("document").ready(function(){
     }).then(function(result){
       console.log("submitted");
       console.log(result);
+
+      //checking to see if creating a user failed or not.
       if (result.success === false){
+        //ANNIE NGO MODLE HERE!
         alert(result.error);
       } else {
         console.log ("navigate to " + result.data.location);
