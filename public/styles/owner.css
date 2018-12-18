@@ -7,34 +7,31 @@ body {
     background-size: 100%;
     }
 
+.navBar {
+    background-color: rgba(253, 255, 255, 0.819);
+}
+
 .navbar-brand {
-  margin-top: 5px;
-  font-size: 30px;  
+  /* margin-top: 3px;  */
+  margin-left: 35%;
+  letter-spacing: 3px;
+  font-size: 40px;
+  padding: 5px;
 }
 
-#search-form {
-    float: right;
+.empty-container {
+    margin-left: 11.5%;
+    margin-right: 11.5%;
 }
 
-h3 {
-  margin: 0 auto;
-  width: 100%;
-  border-style: hidden;
-  line-height: 55px;
-  text-align: center;
-  font-size: 30px;
-  font-style: oblique;
-  color:rgb(170, 111, 111); 
-  margin-top: 10px;  
-}
 
 .category-card {
-    margin-top: 10px;
+    margin-top: 30px;
     margin-bottom: 20px;
-    margin-left: 15%;
-    margin-right: 15%;
+    margin-left: 22%;
+    margin-right: 22%;
     padding: 15px 15px 15px 15px;
-    background-color: rgb(247, 247, 247);
+    background-color: rgba(253, 255, 255, 0.919);
 }
 
 #hello-msg {
@@ -79,20 +76,27 @@ label {
     margin: 0;
 }
 
+#input-area {
+    width: 490px;
+}
+
+
+
+#btn-three {
+    float: right;
+    margin-right: 34%
+}
+
 #button-card {
     width: 110px;
     font-size: 10px;
 }
 
-#new-appt {
-    width: 110px;
-    font-size: 10px;
-}
 
-#new-comment {
+/* #new-comment {
     width: 110px;
     font-size: 10px;
-}
+} */
 
 #vetForm {
     width: 110px;
@@ -103,16 +107,17 @@ label {
     float: left;
 
 }
-
+/* 
 .one {
     width: 20%;
     height: auto;
+    padding-left: 10px;
 }
 
 .two {
     width: auto;
     height: auto;
-}
+} */
 
 .row {
     margin-left: 0px;
@@ -126,6 +131,11 @@ label {
     display: flex; 
     justify-content: center;
 }
+.card {
+    background: rgba(253, 255, 255, 0.919);
+    margin-left: 14%;
+    margin-right: 14%;
+}
 
 @media only screen and (max-width: 1305px) {
     .schedule-list {   
@@ -138,6 +148,11 @@ label {
 }
 
 @media only screen and (max-width: 980px) {
+    #input-area {
+        width: 300px;
+    }
+ 
+ 
     .column {
         width: 100%;
       }    
@@ -167,6 +182,15 @@ label {
 }
   
 @media only screen and (max-width: 768px) {
+    #input-area {
+        width: 400px;
+    }
+    
+    #input-area {
+        width: 200px;
+    }
+ 
+ 
     .column {
         width: 100%;
         margin-bottom: 15px;
@@ -187,6 +211,11 @@ label {
 }
 
 @media screen and (max-width: 640px) {
+
+    #input-area {
+        width: 200px;
+    }
+
     .column {
       width: 100%;
     }    
