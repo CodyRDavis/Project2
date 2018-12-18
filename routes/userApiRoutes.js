@@ -5,7 +5,10 @@ module.exports = function(app) {
 
   //GETTING USER AND THEIR PETS
   app.get("/api/user", function(req,res){
-    db.User.findOne({where: {id: req.user.id}}).then(function(results){
+    console.log ("Looking for user: " + req.user.id);
+    db.User.findOne({attributes: ["name", "email", "phoneNumber"],
+      where: {id: req.user.id},
+      include: [db.Pet]}).then(function(results){
       res.json({
         success: true,
         data: results,

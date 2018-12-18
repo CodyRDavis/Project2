@@ -1,6 +1,6 @@
 $("document").ready(function(){
   console.log("page ready");
-  $.get("/api/pets").then(function(data){
+  $.get("/api/user").then(function(data){
     console.log(data);
   });
 });
