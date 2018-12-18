@@ -33,6 +33,7 @@ $("document").ready(function(){
         name: $("#petName").val().trim(),
         species: $("#petSpecies").val().trim(),
         breed: $("#petBreed").val().trim(),
+        age: $("#petAge").val().trim(),
         chipNumber: $("#petChipNumber").val().trim() ,
         allergies: $("#petAllergies").val().trim(),
         notes: $("#petNotes").val().trim()
