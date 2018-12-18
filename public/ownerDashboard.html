@@ -18,47 +18,48 @@
     
   <div class="container">
     <nav id="navBar" class="navbar navbar-light bg-light">
-            <a class="navbar-brand" style="text-align:center">PET PORTAL</a>     
+      <a class="navbar-brand" style="text-align:center">PET PORTAL</a>     
     </nav>   
   </div> 
-  <br>
-  
-<br>
+    <br>
+    <br>
     
-      <div class="container">
+    <div class="container">
       <div class="card">
-          <div class="card-header">
-            <h3>Pet Name</h3>
-          </div>
-          <div class="card-body">
-            <h5>Breed:<span id="breed"></span></h5>
-            <h5>Species:<span id="species"></span></h5>
-            <h5>Age: <span id="age"></span></h5>
-            <h5>Chip Number: <span id="chipNumber1"></span></h5>
-            <h5>Allergy: <span id="allergy"></span></h5>
-            <h5>Notes:<span id="notes"></span></h5>
-          </div>
+        <div class="card-header">
+          <h3>Pet Name</h3>
+        </div>
+        <div class="card-body">
+          <h5>Breed:<span id="breed"></span></h5>
+          <h5>Species:<span id="species"></span></h5>
+          <h5>Age: <span id="age"></span></h5>
+          <h5>Chip Number: <span id="chipNumber1"></span></h5>
+          <h5>Allergy: <span id="allergy"></span></h5>
+          <h5>Notes:<span id="notes"></span></h5>
         </div>
       </div>
-      
-<!--Card for first pet-->      
-<div class = "category-card">
-    <div id = "petBar" class = "category-bar">
     </div>
-    <div id = "pet-display" class = "category-deck flex accordian accordian-fold">
-      <div class = "location-card d-inline-block">
-        <div class = "location-title text-center">
-          <div class="row">
+    
+<!--Card for first pet-->      
+    <div class = "category-card">
+      <div id = "petBar" class = "category-bar">
+    </div>
+      <div id = "pet-display" class = "category-deck flex accordian accordian-fold">
+        <div class = "location-card d-inline-block">
+          <div class = "location-title text-center">
+            <div class="row">
             <div class="column one" id="hello-box">
               <p id="hello-msg">HELLO</p>
-              <img id="pet1-img" img src="https://via.placeholder.com/100" class="w3-round-xlarge"> 
-            </div>
+                <img id="pet1-img" img src="https://via.placeholder.com/100" class="w3-round-xlarge"> 
+      </div>
+    
           <div class="column two" id="list-subject">  
             <form action="/" method="POST" id="vetForm"> 
               <div class="block">
                 <ul class="card-list" id="list-subject">
                   <label>Name:</label><textarea type="text" name="nameText" class="input-area" form="vetForm" rows="2" width="auto"></textarea>
                   <div class="container-breed">
+<<<<<<< HEAD
                       <label for="breed">Breed</label>
                         <select id="breed" name="breed">
                           <option value="choose">Choose One</option>
@@ -73,21 +74,36 @@
                   <div id="btn-three">
                   <button type="sumbit" class="btn btn-secondary" name="button" id="button-card">Create Pet</button>
                   <button type="sumbit" class="btn btn-secondary" name="button" id="button-card">Cancel</button>
+=======
+                    <label for="breed">Breed</label>
+                      <select id="breed" name="breed">
+                        <option value="choose">Choose One</option>
+                        <option value="dog">Canine</option>
+                        <option value="cat">Feline</option>
+                      </select>
+                      </div>                 
+                        <label>Species:</label><textarea type="text" name="speciesText" id="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Age:</label><textarea type="text" name="ageText" id="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Chip Number:</label><textarea type="text" name="chipNumberText" id="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Allergies:</label><textarea type="text" name="allergiesText" id="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <div id="btn-three">
+                        <button type="sumbit" class="btn btn-secondary" name="button" id="button-card">Create Pet</button>
+                        <button type="sumbit" class="btn btn-secondary" name="button" id="button-card">Cancel</button>
+                      </div>
+                    </ul>
+>>>>>>> 9b4eeba66f477de5127396fe38a0a683f31e2459
                   </div>
-                </ul>
+                </form>      
               </div>
-            </form>      
-          </div>
-           
             </div>
           </div>
         </div>
       </div>
     </div>
      
-        <p id="links-bottom"></a><a href="https://www.google.com/">Email Us</a><a> | </a><a href="https://pets.webmd.com/default.htm">Resources</a></p>
-      </div>
+      <p id="links-bottom"></a><a href="https://www.google.com/">Email Us</a><a> | </a><a href="https://pets.webmd.com/default.htm">Resources</a></p>
     </div>
+  </div>
     <script src="js/ownerDashboard.js" type="text/javascript"></script>
 </body>
 </html>
