@@ -22,6 +22,7 @@ module.exports = function(app) {
   });
 
   app.post("/api/signup", function(req,res){
+    
     console.log("new sign up... checking for existing user.");
     //console.log(req.body);
 
