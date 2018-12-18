@@ -6,7 +6,13 @@ $("document").ready(function(){
       password: $("#password").val().toLowerCase(),
     }).then(function(result){
       console.log(result);
-      window.location.href = result;
+      window.location.replace(result.data.location);
+    }).fail(function(err){ //fail happens when passport authenticate fails.
+      console.log(err);
+      if (err.status === 401){
+        //ANNIE NGO: MODUL HERE!
+        alert("Invalid Email or Password");
+      }
     });
   });
 });
