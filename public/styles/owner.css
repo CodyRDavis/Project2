@@ -87,7 +87,7 @@ label {
     margin-right: 34%
 }
 
-#button-card {
+.button-card {
     width: 110px;
     font-size: 10px;
 }

@@ -23,6 +23,24 @@ $("document").ready(function(){
 
     }
   });
+
+  $("#btn-createPet").click(function(e){
+    e.preventDefault();
+    if (false){
+      console.log("Future data validation");
+    } else {
+      $.post("/api/pets", {
+        name: $("#petName").val().trim(),
+        species: $("#petSpecies").val().trim(),
+        breed: $("#petBreed").val().trim(),
+        chipNumber: $("#petChipNumber").val().trim() ,
+        allergies: $("#petAllergies").val().trim(),
+        notes: $("#petName").val().trim()
+      }).then(function(results){
+        console.log (results);
+      });
+    }
+  });
 });
 
 function petInfoValidate(info){
