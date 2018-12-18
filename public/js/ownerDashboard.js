@@ -38,6 +38,11 @@ $("document").ready(function(){
         notes: $("#petName").val().trim()
       }).then(function(results){
         console.log (results);
+        if (results.success){
+          window.location.replace(results.data.location);
+        } else {
+          alert (results.errors[0]);
+        }
       });
     }
   });

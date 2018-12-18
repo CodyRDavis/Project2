@@ -13,8 +13,28 @@ module.exports = function(app) {
   // Create a new pet
   app.post("/api/pets", function(req, res) {
     console.log(req.body);
-    db.Pet.create(req.body).then(function(results) {
-      res.send("/");
+    let pet = req.body;
+
+    db.Pet.create({
+      owner_id: req.user.id,
+      name: pet.name,
+      species: pet.species,
+      breed: pet.breed,
+      age: pet.age,
+      chipNumber: pet.chipNumber,
+      allergies: pet.allergies,
+      notes: pet.notes
+    }).then(function(results) {
+      console.log (results);
+      res.json({
+        success: true,
+        data: 
+        {
+          location: "/dashboard",
+          result: results
+        },
+        errors: []
+      });
     });
   });
 
