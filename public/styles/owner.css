@@ -76,7 +76,7 @@ label {
     margin: 0;
 }
 
-#input-area {
+.input-area {
     width: 490px;
 }
 
@@ -145,10 +145,14 @@ label {
       margin-top: 15px;
       padding-left: 0px;
     }
+
+    #btn-three {
+        margin: auto;
+    }
 }
 
 @media only screen and (max-width: 980px) {
-    #input-area {
+    .input-area {
         width: 300px;
     }
  
@@ -179,11 +183,19 @@ label {
         margin-left: 0%;
         padding-left: 0%;
       }
+
+      #btn-three {
+        margin: auto;
+    }
 }
   
 @media only screen and (max-width: 768px) {
-    #input-area {
-        width: 400px;
+    .navbar-brand {
+        margin: auto;
+    }
+
+    .input-area {
+        width: 200px;
     }
     
     #input-area {
@@ -208,11 +220,15 @@ label {
         margin: 0;
         padding-left: 0px;
     }
+
+    #btn-three {
+        margin: auto;
+    }
 }
 
 @media screen and (max-width: 640px) {
 
-    #input-area {
+    .input-area {
         width: 200px;
     }
 
@@ -232,6 +248,10 @@ label {
       width: 110px;
       font-size: 10px;
       margin-bottom: 15px;
+    }
+
+    #btn-three {
+        margin: auto;
     }
 }
 
