@@ -35,7 +35,7 @@ $("document").ready(function(){
         breed: $("#petBreed").val().trim(),
         chipNumber: $("#petChipNumber").val().trim() ,
         allergies: $("#petAllergies").val().trim(),
-        notes: $("#petName").val().trim()
+        notes: $("#petNotes").val().trim()
       }).then(function(results){
         console.log (results);
         if (results.success){
