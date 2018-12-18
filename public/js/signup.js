@@ -35,4 +35,21 @@ $("document").ready(function(){
     }
     
   });
+  $("#").click(function(e){
+    e.preventDefault();
+    if (false){
+      console.log("Future data validation");
+    } else {
+      $.post("/api/pets", {
+        name: "fix me",
+        species: "fix me",
+        breed: "fix me",
+        chipNumber: 0 ,
+        allergies: "fix me",
+        notes: "fix me"
+      }).then(function(results){
+        console.log (results);
+      });
+    }
+  });
 });
