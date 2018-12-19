@@ -54,6 +54,31 @@ h3 {
   font-size: 20px;
 }
 
+#aboutUs {
+  text-indent: 30px;
+  font-size: 18px;
+}
+
+#clinicName {
+  font-size: 19px;
+  letter-spacing: 1.5px;
+}
+
+#address {
+  font-size: 17px;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+
+/* Styles create and login button */
+
+#buttons {
+  margin-left: 39%;
+}
+
+/* Styles links at the bottom of pages */
+
 #links-bottom {
   margin-top: 5px;
   display: flex; 
@@ -64,8 +89,19 @@ a {
   color: black;
 }
 
+@media screen and (max-width: 1024px) {
+  #buttons {
+    margin-left: 37%;
+  }
+}
+@media screen and (max-width: 992px) {
+  #buttons {
+    margin-left: 33%;
+  }
+}
+
 /* Responsive for small mobile screens*/
-@media screen and (max-width: 475px) {
+@media screen and (max-width: 768px) {
   h1 {
     font-size: 45px;
     letter-spacing: 6px;
@@ -78,5 +114,19 @@ a {
   h3 {
     letter-spacing: 2px;
     font-size: 20px;
+  }
+
+  #buttons {
+    margin-left: 32%;
+  }
+
+}
+@media screen and (max-width: 600px) {
+  .jumbotron {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+  }
+  #buttons {
+    margin-left: 13%;
   }
 }

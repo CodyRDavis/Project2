@@ -24,21 +24,8 @@
     <br>
     <br>
     
-    <div class="container">
-      <div class="card">
-        <div class="card-header">
-          <h3>Pet Name</h3>
-        </div>
-        <div class="card-body">
-          <h5>Breed:<span id="breed"></span></h5>
-          <h5>Species:<span id="species"></span></h5>
-          <h5>Age: <span id="age"></span></h5>
-          <h5>Chip Number: <span id="chipNumber1"></span></h5>
-          <h5>Allergy: <span id="allergy"></span></h5>
-          <h5>Notes:<span id="notes"></span></h5>
-        </div>
-      </div>
-    </div>
+    <div id="container-empty" class="container"></div>
+    
     
 <!--Card for first pet-->      
     <div class = "category-card">
@@ -57,23 +44,25 @@
             <form action="/" method="POST" id="vetForm"> 
               <div class="block">
                 <ul class="card-list" id="list-subject">
-                  <label>Name:</label><textarea type="text" name="nameText" class="input-area" form="vetForm" rows="2" width="auto"></textarea>
+                  <label>Name:</label><textarea id = "petName" type="text" name="nameText" class="input-area" form="vetForm" rows="2" width="auto"></textarea>
                   <div class="container-breed">
-                    <label for="breed">Breed</label>
-                      <select id="breed" name="breed">
+                    <label for="species">Species</label>
+                      <select id="petSpecies" name="breed">
                         <option value="choose">Choose One</option>
-                        <option value="dog">Canine</option>
-                        <option value="cat">Feline</option>
+                        <option value="canine">Canine</option>
+                        <option value="feline">Feline</option>
+                        <option value="other">Other</option>
                       </select>
                       </div>                 
-                        <label>Species:</label><textarea type="text" name="speciesText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
-                        <label>Age:</label><textarea type="text" name="ageText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
-                        <label>Chip Number:</label><textarea type="text" name="chipNumberText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
-                        <label>Allergies:</label><textarea type="text" name="allergiesText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Breed:</label><textarea id="petBreed" type="text" name="speciesText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Age:</label><textarea id="petAge" type="text" name="ageText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Chip Number:</label><textarea id="petChipNumber" type="text" name="chipNumberText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
+                        <label>Allergies:</label><textarea id = "petAllergies"type="text" name="allergiesText" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
                         <label>Notes:</label><textarea type="text" name="petNotes" id="petNotes" class="input-area" form="vetForm" rows="1"style="auto"></textarea>
+
                         <div id="btn-three">
-                        <button type="sumbit" class="btn btn-secondary" name="button" id="button-card">Create Pet</button>
-                        <button type="sumbit" class="btn btn-secondary" name="button" id="button-card">Cancel</button>
+                        <button id="btn-createPet" type="sumbit" class="btn btn-secondary" name="button" class="button-card">Create Pet</button>
+                        <button id="btn-cancelPet" type="sumbit" class="btn btn-secondary" name="button" class="button-card">Cancel</button>
                       </div>
                     </ul>
                   </div>
