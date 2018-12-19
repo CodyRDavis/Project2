@@ -2,36 +2,35 @@
     box-sizing: border-box;
 }
 
+/* Styles the background */
 body {
     background-image: url("../images/annie-spratt-469224-unsplash.jpg");
     background-size: 100%;
     }
 
-.navBar {
-    background-color: rgba(253, 255, 255, 0.819);
-}
+/* Styles the title */
 
 .navbar-brand {
-  /* margin-top: 3px;  */
   margin-left: 35%;
   letter-spacing: 3px;
   font-size: 40px;
   padding: 5px;
 }
 
+/* Styles the populating cards */
 .empty-container {
     margin-left: 11.5%;
     margin-right: 11.5%;
 }
 
-
+/* Styles the form card */
 .category-card {
     margin-top: 30px;
     margin-bottom: 20px;
     margin-left: 22%;
     margin-right: 22%;
     padding: 15px 15px 15px 15px;
-    background-color: rgba(253, 255, 255, 0.919);
+    background-color: rgb(253, 255, 255);
 }
 
 #hello-msg {
@@ -80,8 +79,7 @@ label {
     width: 490px;
 }
 
-
-
+/* Styles to the form buttons */
 #btn-three {
     float: right;
     margin-right: 34%
@@ -93,11 +91,6 @@ label {
 }
 
 
-/* #new-comment {
-    width: 110px;
-    font-size: 10px;
-} */
-
 #vetForm {
     width: 110px;
     font-size: 10px;
@@ -105,19 +98,7 @@ label {
 
 .column {
     float: left;
-
 }
-/* 
-.one {
-    width: 20%;
-    height: auto;
-    padding-left: 10px;
-}
-
-.two {
-    width: auto;
-    height: auto;
-} */
 
 .row {
     margin-left: 0px;
@@ -137,6 +118,7 @@ label {
     margin-right: 14%;
 }
 
+/* Styles for media screens */
 @media only screen and (max-width: 1305px) {
     .schedule-list {   
       width: 120px; 
@@ -226,7 +208,7 @@ label {
     }
 }
 
-@media screen and (max-width: 640px) {
+@media screen and (max-width: 600px) {
 
     .input-area {
         width: 200px;
